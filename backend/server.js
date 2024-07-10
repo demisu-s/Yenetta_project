@@ -1,8 +1,10 @@
 const express=require('express')
 const dotenv=require('dotenv')
 const userRoutes=require('./routes/userRoute')
+const connectDB = require('./config/db')
 //import local variable
 dotenv.config()
+connectDB() 
 const app=express()
 const port=process.env.PORT
 
